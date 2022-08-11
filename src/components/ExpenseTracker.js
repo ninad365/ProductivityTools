@@ -1,7 +1,7 @@
-import { Income } from './Income';
-import { Header } from './Header';
-import { AddIncome } from './AddIncome';
-import { AddExpense } from './AddExpense';
+import { Income } from './ExpenseTracker/Income';
+import { Header } from './ExpenseTracker/Header';
+import { AddIncome } from './ExpenseTracker/AddIncome';
+import { AddExpense } from './ExpenseTracker/AddExpense';
 
 function ExpenseTracker() {
   return (

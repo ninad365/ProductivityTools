@@ -1,26 +1,17 @@
 import './App.css';
 import Calculator from './components/Calculator';
 import ExpenseTracker from './components/ExpenseTracker';
+import {NavBar} from './components/NavBar';
 import { 
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 
 function App() {
   return (
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">ExpenseTracker</Link>
-            </li>
-            <li>
-              <Link to="/Calculator">Calculator</Link>
-            </li>
-          </ul>
-        </nav>
 
+        < NavBar />
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Routes>
