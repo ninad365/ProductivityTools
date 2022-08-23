@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import { Transactions } from './ExpenseTracker/Transactions';
+import { NetIncomeExpense } from './ExpenseTracker/NetIncomeExpense';
 import { Header } from './ExpenseTracker/Header';
 import { AddIncome } from './ExpenseTracker/AddIncome';
 import { AddExpense } from './ExpenseTracker/AddExpense';
@@ -8,19 +9,19 @@ import { AddExpense } from './ExpenseTracker/AddExpense';
 function ExpenseTracker() {
     let default_transactions = [
       {
-        id:1,
-        text:"jdf",
-        value:12,
+        id:2,
+        text:"Salary",
+        value:50000,
       },
       {
-        id:2,
-        text:"jdf",
-        value:12,
+        id:1,
+        text:"Interest",
+        value:1200,
       },
       {
         id:3,
-        text:"jdf",
-        value:12,
+        text:"Electricity bill",
+        value:-1200,
       }
     ]
 
@@ -35,6 +36,7 @@ function ExpenseTracker() {
   return (
     <div className="App">
       < Header />
+      < NetIncomeExpense />
       < Transactions transactions= {transactions}/>
       < AddIncome />
       < AddExpense addExpenseClick={(transaction, amount) => addExpenseClick(transaction, amount)} />
