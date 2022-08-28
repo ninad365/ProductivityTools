@@ -8,21 +8,6 @@ import { AddExpense } from './ExpenseTracker/AddExpense';
 
 function ExpenseTracker() {
   let default_transactions = [
-    {
-      id: 2,
-      text: "Salary",
-      value: 50000,
-    },
-    {
-      id: 1,
-      text: "Interest",
-      value: 1200,
-    },
-    {
-      id: 3,
-      text: "Electricity bill",
-      value: -1200,
-    }
   ]
 
   const [transactions, setEntries] = useState(default_transactions)
