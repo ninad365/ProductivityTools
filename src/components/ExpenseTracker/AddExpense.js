@@ -4,8 +4,6 @@ import React, { useState } from 'react'
 export const AddExpense = (props) => {
     const [entry, setEntry] = useState('')
     const [amount, setAmount] = useState(0)
-    const [totalIncome, settotalIncome] = useState(0)
-    const [totalExpense, settotalExpense] = useState(0)
 
 
     function getEntryText(val) {

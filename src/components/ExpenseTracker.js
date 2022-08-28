@@ -7,37 +7,51 @@ import { AddIncome } from './ExpenseTracker/AddIncome';
 import { AddExpense } from './ExpenseTracker/AddExpense';
 
 function ExpenseTracker() {
-    let default_transactions = [
-      {
-        id:2,
-        text:"Salary",
-        value:50000,
-      },
-      {
-        id:1,
-        text:"Interest",
-        value:1200,
-      },
-      {
-        id:3,
-        text:"Electricity bill",
-        value:-1200,
-      }
-    ]
+  let default_transactions = [
+    {
+      id: 2,
+      text: "Salary",
+      value: 50000,
+    },
+    {
+      id: 1,
+      text: "Interest",
+      value: 1200,
+    },
+    {
+      id: 3,
+      text: "Electricity bill",
+      value: -1200,
+    }
+  ]
 
   const [transactions, setEntries] = useState(default_transactions)
+  const [totalIncome, settotalIncome] = useState(0)
+  const [totalExpense, settotalExpense] = useState(0)
 
   function addExpenseClick(transaction, amount) {
-    let new_tran = transactions.concat({id:Math.floor(Math.random() * 100000000), text: transaction, value: amount})
-    console.log('parent' + typeof(new_tran))
-    setEntries(new_tran)
+    let new_trans = transactions.concat({ id: Math.floor(Math.random() * 100000000), text: transaction, value: amount }) // Adds new transaction object to the list of transactions
+    setEntries(new_trans)
+
+    let tE = 0
+    let tI = 0
+    new_trans.forEach(element => {
+      if (element.value > 0) {
+        tI += Number(element.value)
+      } else {
+        tE += Number(element.value)
+      }
+    });
+
+    settotalIncome(tI)
+    settotalExpense(tE)
   }
 
   return (
     <div className="App">
       < Header />
-      < NetIncomeExpense />
-      < Transactions transactions= {transactions}/>
+      < NetIncomeExpense totalExpense={totalExpense} totalIncome={totalIncome} />
+      < Transactions transactions={transactions} />
       < AddIncome />
       < AddExpense addExpenseClick={(transaction, amount) => addExpenseClick(transaction, amount)} />
     </div>
