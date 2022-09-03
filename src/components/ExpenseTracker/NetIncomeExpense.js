@@ -4,20 +4,20 @@ export function NetIncomeExpense(props) {
   return (
     <div className='container'>
       <div className='row'>
-        <div className='col-sm-3'></div>
-        <div className='col-sm-3'>
-          <div className="card text-bg-success">
+        <div className='col'>
+          <div className="card mt-3">
             <h5 className='card-title'>Net Income</h5>
-            <p>{props.totalIncome}</p>
+            <h3 className='text-success'>Rs. {props.totalIncome}</h3>
           </div>
         </div>
-        <div className='col-sm-3'>
-          <div className="card text-bg-danger">
+      </div>
+      <div className='row'>
+        <div className='col'>
+          <div className="card mt-3">
             <h5 className='card-title'>Net Expense</h5>
-            <p>{props.totalExpense}</p>
+            <h3 className='text-danger'>{props.totalExpense}</h3>
           </div>
         </div>
-        <div className='col-sm-3'></div>
       </div>
     </div>
   )

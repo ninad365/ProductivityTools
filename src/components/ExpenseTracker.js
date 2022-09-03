@@ -32,11 +32,13 @@ function ExpenseTracker() {
   }
 
   return (
-    <div className="App">
-      < Header />
-      < NetIncomeExpense totalExpense={totalExpense} totalIncome={totalIncome} />
-      < Transactions transactions={transactions} />
-      < AddTransaction addExpenseClick={(transaction, amount) => addExpenseClick(transaction, amount)} />
+    <div className='container'>
+      <div className="App">
+        < Header />
+        < NetIncomeExpense totalExpense={totalExpense} totalIncome={totalIncome} />
+        < Transactions transactions={transactions} />
+        < AddTransaction addExpenseClick={(transaction, amount) => addExpenseClick(transaction, amount)} />
+      </div>
     </div>
   );
 }

@@ -31,14 +31,13 @@ export const AddTransaction = (props) => {
         <div className='form'>
             <div className="container">
                 <div className="row">
-                    <div className="col-3"></div>
-                    <div className="col-3">
+                    <div className="col-7">
                         <input value={entry} type="text" className="form-control" aria-label="Sizing example input" onChange={getEntryText} aria-describedby="inputGroup-sizing-sm" />
                     </div>
-                    <div className="col-2">
+                    <div className="col-3">
                         <input value={amount} type="number" className="form-control" aria-label="Sizing example input" onChange={getEntryAmount} aria-describedby="inputGroup-sizing-sm" />
                     </div>
-                    <div className="col-1">
+                    <div className="col-2">
                         <button type="submit" className="btn btn-outline-primary" onClick={addExpenseButtonClick}>  Add  </button>
                     </div>
                 </div>

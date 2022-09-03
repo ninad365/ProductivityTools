@@ -13,11 +13,16 @@
   }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body { 
+  background: AliceBlue; 
+}
+
+.App {
+  padding: 20px;
+  background-color: rgb(169, 200, 218);
+  border: 1px solid #c3c3c3;
+}
+
+.container {
+  padding: 20px;
 }
