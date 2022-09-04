@@ -16,7 +16,7 @@ function Calculator() {
         }
     }
     return (
-        <div className="App">
+        <div className='container App'>
             <h1>Calculator</h1>
             <form>
                 <div className="mb-3 container">
